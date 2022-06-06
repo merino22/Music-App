@@ -15,15 +15,6 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AssistantDatabaseContext>(opt => opt.UseSqlite(connectionString: "Data Source=database.db")); //para generar la bd
 
-builder.Services.AddScoped<IRepository<Ingredient>, IngredientEFRepository>();
-builder.Services.AddScoped<IService<Ingredient>, IngredientService>();
-
-builder.Services.AddScoped<IRepository<GroceryList>, GroceryListEFRepository>();
-builder.Services.AddScoped<IService<GroceryList>, GroceryListService>();
-
-builder.Services.AddScoped<IRepository<Reminder>, ReminderEFRepository>();
-builder.Services.AddScoped<IService<Reminder>, ReminderService>();
-
 builder.Services.AddScoped<IRepository<Song>, SongEFRepository>();
 builder.Services.AddScoped<IService<Song>, SongService>();
 
