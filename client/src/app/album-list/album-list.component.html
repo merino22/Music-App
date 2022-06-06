@@ -1,12 +1,18 @@
-<div class="mx-5">
-    <div class="card" *ngFor="let album of albumList" style="width: 18rem; border: none;">
-        <a [routerLink]="['/album', album.name]" (click)="onClick(album)" style="text-decoration: none; color: rgb(0, 0, 0);">
-          <img class="card-img-top" src="../../assets/images/cover.jpeg">
-          <div class="card-body" style="text-align: center;">
-            <h3 class="card-title" style="text-align: center;">
-              {{album.name}}
-            </h3>
-          </div>
-        </a>
+<div class="">
+  <div class="row mx-5">
+    <div class="card my-2 mx-5 div-hover" *ngFor="let album of albumList" style="width: 16rem; border: none;">
+        <div class="img-hover-zoom">
+          <a [routerLink]="['/album', album.name]" (click)="onClick(album)" style="text-decoration: none; color: rgb(0, 0, 0);">
+            <div class="">
+              <img class="card-img-top" src="../../assets/images/cover.jpeg">
+            </div>
+            <div class="card-body" style="height: 8rem;">
+              <h3 class="card-title styling" style="text-align: center; padding-top: 1.3rem;">
+                {{album.name}}
+              </h3>
+            </div>
+          </a>
+        </div>
     </div>
+  </div>
 </div>

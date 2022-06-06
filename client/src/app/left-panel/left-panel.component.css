@@ -1,0 +1,5 @@
+.onHover:hover{
+background-color: #262afd;
+border: none;
+transition: background 1.2s;
+}

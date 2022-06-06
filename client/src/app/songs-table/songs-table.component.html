@@ -1,13 +1,13 @@
 <div class="container">
-  <table class="table table-hover table-dark" style="background-color: black;">
+  <table class="table table-hover table-dark" style="background-color: rgb(22, 22, 22);">
     <thead>
       <tr>
         <th scope="col"><button style="background: none; color: white; border: none;">▲▼</button></th>
-        <th scope="col">NAME</th>
-        <th scope="col">ARTIST</th>
-        <th scope="col">TIME</th>
-        <th scope="col">POPULARITY</th>
-        <th scope="col">PRICE</th>
+        <td scope="col" style="color: rgb(116, 116, 116);">NAME</td>
+        <td scope="col" style="color: rgb(116, 116, 116);">ARTIST</td>
+        <td scope="col" style="color: rgb(116, 116, 116);">TIME</td>
+        <td scope="col" style="color: rgb(116, 116, 116);">POPULARITY</td>
+        <td scope="col" style="color: rgb(116, 116, 116);">PRICE</td>
       </tr>
     </thead>
     <tbody>
@@ -17,7 +17,7 @@
         <td>{{song.artist}}</td>
         <td>{{song.time}}</td>
         <td>
-          <div class="progress" style="height: 12px; width: 80px;">
+          <div class="progress" style="height: 12px; width: 80px; background-color: rgb(37, 37, 37); border-radius: 0px;">
             <div class="progress-bar bg-secondary " role="progressbar" [ngStyle]="{'width': song.popularity * 20 + '%'}" aria-valuenow="song.popularity" aria-valuemin="0" aria-valuemax="5"></div>
           </div>
       </td>

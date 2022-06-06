@@ -1,6 +1,14 @@
 <div class="container" style="text-align: center;">
   <img src="../../assets/images/cover.jpeg" alt="" height="200px" width="200px">
-  
-  <p>Released {{convertedDate}}</p>
-  <p>{{albumInfo.label}}</p>
+  <div class="col" style="padding-top: 2em;">
+    <button class="btn btn-default onHover" style="width: 9em; height: 35px; border-radius: 20px; border-color: grey; text-align: center; color: white; font: bold;"><p style="padding-right: 8px; padding-top: 0px;">${{albumInfo.price}}</p></button>
+  <div style="padding-top: 1em;">
+    <hr style="background-color: rgb(116, 116, 116); height: 0.1px;">
+    <div style="color: orange;">
+      <ngb-rating [max]="5" [(rate)]="albumInfo.rating" [readonly]="true"></ngb-rating>
+    </div>
+    <p style="color: white;">Released {{convertedDate}}</p>
+    <p style="color: white;">© {{albumInfo.label}}</p>
+  </div>
+  </div>
 </div>

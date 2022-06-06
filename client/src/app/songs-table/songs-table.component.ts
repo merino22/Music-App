@@ -18,5 +18,6 @@ export class SongsTableComponent implements OnInit {
   constructor(private songApiSvc: SongsApiService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
+
   }
 }

@@ -1,18 +1,19 @@
-import { DatePipe } from '@angular/common';
 import { AfterViewChecked, Component, Input, OnInit } from '@angular/core';
-import { Album } from '../models/album';
 
 @Component({
   selector: 'app-left-panel',
   templateUrl: './left-panel.component.html',
   styleUrls: ['./left-panel.component.css']
 })
-export class LeftPanelComponent implements AfterViewChecked {
+export class LeftPanelComponent implements OnInit, AfterViewChecked {
 
   @Input() albumInfo?: any;
   convertedDate?: string;
-
+  currentRate: number = 0;
   constructor() { }
+
+  ngOnInit(): void {
+  }
 
   ngAfterViewChecked(): void {
     this.convertedDate = new Date(this.albumInfo.releaseDate).toLocaleString();
