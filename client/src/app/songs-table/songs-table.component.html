@@ -1,0 +1,28 @@
+<div class="container">
+  <table class="table table-hover table-dark" style="background-color: black;">
+    <thead>
+      <tr>
+        <th scope="col"><button style="background: none; color: white; border: none;">▲▼</button></th>
+        <th scope="col">NAME</th>
+        <th scope="col">ARTIST</th>
+        <th scope="col">TIME</th>
+        <th scope="col">POPULARITY</th>
+        <th scope="col">PRICE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let song of songsList">
+        <td>{{song.id}}</td>
+        <td>{{song.name}}</td>
+        <td>{{song.artist}}</td>
+        <td>{{song.time}}</td>
+        <td>
+          <div class="progress" style="height: 12px; width: 80px;">
+            <div class="progress-bar bg-secondary " role="progressbar" [ngStyle]="{'width': song.popularity * 20 + '%'}" aria-valuenow="song.popularity" aria-valuemin="0" aria-valuemax="5"></div>
+          </div>
+      </td>
+        <td>${{song.price}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
